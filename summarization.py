@@ -1,5 +1,5 @@
 import streamlit as st
-from langchain import OpenAI
+from langchain.llms import OpenAI
 from langchain.docstore.document import Document
 from langchain.text_splitter import CharacterTextSplitter
 from langchain.chains.summarize import load_summarize_chain
@@ -28,7 +28,7 @@ result = []
 
 
 with st.form('Summarization_form', clear_on_submit=True):
-    openai_api_key = st.text_input('OpenAI API Key', type='password', , disabled=not txt_input)
+    openai_api_key = st.text_input('OpenAI API Key', type='password', disabled=not txt_input)
     submitted = st.form_submit_button('Submit')
     if submitted and openai_api_key.startswith('sk-'):
         with st.spinner("Working in process ..."):
@@ -38,6 +38,6 @@ with st.form('Summarization_form', clear_on_submit=True):
 
 if len(result):
     st.info(response)
-    
+
 
 
