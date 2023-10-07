@@ -6,7 +6,9 @@ from langchain import PromptTemplate
 st.set_page_config(page_title='🦜🔗 Leo\'s LLM App')
 st.title('🦜🔗 Generate blog ideas')
 
-openai_api_key = st.secrets["openai_key"]
+# openai_api_key = st.secrets["openai_key"]
+openai_api_key = st.sidebar.text_input('OpenAi API Key')
+
 
 def generate_response(input_text):
     llm = OpenAI(model_name='text-davinci-003', openai_api_key= openai_api_key)

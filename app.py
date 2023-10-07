@@ -3,9 +3,9 @@ from langchain.llms import OpenAI
 
 st.title('🦜🔗 Leo\'s LLM App')
 
-# openai_api_key = st.sidebar.text_input('OpenAi API Key')
+openai_api_key = st.sidebar.text_input('OpenAi API Key')
 # openai.api_key = st.secrets.openai_key
-openai_api_key = st.secrets["openai_key"]
+# openai_api_key = st.secrets["openai_key"]
 
 
 def generate_response(input_text):
