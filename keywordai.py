@@ -4,7 +4,7 @@ import json
 
 headers = {
     'Content-Type': 'application/json',
-    'Authorization': 'Api-Key {api key}',
+    'Authorization': 'Api-Key XXXXXXXXXXXX',
 }
 
 # Now, you can access the 'choices' or other fields from the response_data
